@@ -1,4 +1,4 @@
-import logo from '../../assets/image/logo.png'
+import whitelogo from '../../assets/image/whiteunclewu.png'
 import { NavLink } from 'react-router-dom'
 
 const Header = (props) => {
@@ -7,7 +7,7 @@ const Header = (props) => {
     return (
         <>
             <header data-aos={(animation)} data-aos-once="true" data-aos-delay={(delay)} className="fixed w-full h-20 flex justify-center items-center">
-                <img src={logo} alt="" width={130} height={130} className="cursor-pointer absolute left-10" />
+                <img src={whitelogo} alt="" width={130} height={130} className="cursor-pointer absolute left-10" />
                 <ul className="flex gap-16 font-poppins font-light">
                     <NavLink className="nav-link" to={'/'}>Home</NavLink>
                     <NavLink className='nav-link' to={'/ourstory'}>Our Story</NavLink>

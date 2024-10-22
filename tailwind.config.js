@@ -21,7 +21,8 @@ export default {
         },
       },
       backgroundImage: {
-        'homebg': "url('./assets/image/nasgor.png')",
+        'homebg': "url('./assets/image/homebg.png')",
+        'menubg': "url('./assets/image/menubg.jpeg')",
       },
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
@@ -29,6 +30,8 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // require('tailwind-scrollbar-hide'),
+  ],
 }
 

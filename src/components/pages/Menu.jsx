@@ -4,6 +4,7 @@ import circle from '../../assets/image/circle.png'
 import nasgor from '../../assets/image/homebg.png'
 import { Link } from 'react-router-dom'
 import '../styles/CustomScrollBar.css'
+import '../styles/Font.css'
 
 
 const MenuPage = () => {
@@ -27,14 +28,18 @@ const MenuPage = () => {
 
 
     return (
-        <div className="::-webkit-scrollbar :">
+        <div className="font-inter">
             <Header />
-            <div className="w-full h-screen bg-cover bg-center flex flex-col justify-center font-inter items-center bg-no-repeat bg-menubg">
-                <div className="flex w-64 h-64 rounded-full bg-cover bg-center justify-center items-center" style={{ backgroundImage: `url(${circle})`, transform: `rotate(${rotateValue}deg)`, transition: 'transform 0.5s ease-out' }}>
-                    <Link style={{ transform: "none !important" }}><img className="rounded-full w-36 h-36" src={nasgor} alt="" /></Link>
+            <div className="w-full h-full bg-fixed bg-cover bg-center flex flex-col justify-center font-inter items-center bg-no-repeat bg-menubg backdrop-blur-2xl">
+                <p className="text-white font-kelvinch text-3xl mt-48">We Serve..</p>
+                <div className="flex justify-center items-center gap-20">
+                    <div className="flex w-80 h-80 rounded-full flex-col bg-cover bg-center justify-center items-center" style={{ backgroundImage: `url(${circle})`, transform: `rotate(${rotateValue}deg)`, transition: 'transform 0.5s ease-out' }}>
+                        <img src={nasgor} className="!animate-none rounded-full w-[13rem] h-[13rem]" alt="" />
+                    </div>
+                    <p className="text-white font-inter text-xl w-[40%]">Golden grains of rice, stir-fried with fresh veggies, eggs, and savory seasonings, creating a symphony of flavors in every bite.</p>
                 </div>
             </div>
-            <div className="h-screen"></div>
+
         </div>
     )
 }

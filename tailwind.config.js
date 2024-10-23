@@ -25,6 +25,7 @@ export default {
         'menubg': "url('./assets/image/menubg.jpeg')",
       },
       fontFamily: {
+        'kelvinch': ['Kelvinch', 'sans-serif'],
         'inter': ['Inter', 'sans-serif'],
         'poppins': ['Poppins', 'sans-serif'],
       },

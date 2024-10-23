@@ -1,10 +1,11 @@
 import Header from "../utilities/Header"
 import React, { useEffect, useState } from 'react';
 import circle from '../../assets/image/circle.png'
-import nasgor from '../../assets/image/homebg.png'
-import { Link } from 'react-router-dom'
+import friedrice from '../../assets/image/friedrice.jpg'
+import FoodDescription from '../utilities/FoodDescription'
 import '../styles/CustomScrollBar.css'
 import '../styles/Font.css'
+import CircleMove from "../utilities/CircleMove";
 
 
 const MenuPage = () => {
@@ -14,7 +15,7 @@ const MenuPage = () => {
     // Function to handle scroll event
     const handleScroll = () => {
         const scrollPosition = window.scrollY;
-        setRotateValue(scrollPosition / 30); // Adjust rotation sensitivity
+        setRotateValue(scrollPosition / 20); // Adjust rotation sensitivity
     };
 
     useEffect(() => {
@@ -28,17 +29,25 @@ const MenuPage = () => {
 
 
     return (
-        <div className="font-inter">
+        <div className="">
             <Header />
             <div className="w-full h-full bg-fixed bg-cover bg-center flex flex-col justify-center font-inter items-center bg-no-repeat bg-menubg backdrop-blur-2xl">
-                <p className="text-white font-kelvinch text-3xl mt-48">We Serve..</p>
-                <div className="flex justify-center items-center gap-20">
-                    <div className="flex w-80 h-80 rounded-full flex-col bg-cover bg-center justify-center items-center" style={{ backgroundImage: `url(${circle})`, transform: `rotate(${rotateValue}deg)`, transition: 'transform 0.5s ease-out' }}>
-                        <img src={nasgor} className="!animate-none rounded-full w-[13rem] h-[13rem]" alt="" />
-                    </div>
-                    <p className="text-white font-inter text-xl w-[40%]">Golden grains of rice, stir-fried with fresh veggies, eggs, and savory seasonings, creating a symphony of flavors in every bite.</p>
-                </div>
+                <p className="text-white font-kelvinch text-3xl mt-48 mb-36">We Serve..</p>
+                <CircleMove
+                    rotateValue={rotateValue}
+                    imagecircle={circle}
+                    image={friedrice}
+                    widthcircle="w-[25rem]"
+                    heightcircle="h-[25rem]"
+                    widthimage="w-[16.5rem]"
+                    heightimage="h-[16.5rem]"
+                />
+
+
+
+
             </div>
+            <div className="h-screen"></div>
 
         </div>
     )

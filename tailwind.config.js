@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'light-yellow': '#fef9c3'
+      },
       animation: {
         float: 'float 3s linear infinite',
         circle: 'circle 10s linear infinite',

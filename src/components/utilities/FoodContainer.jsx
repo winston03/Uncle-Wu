@@ -2,7 +2,7 @@ import '../styles/Font.css'
 
 const FoodContainer = (props) => {
     return (
-        <div data-aos={props.dataaos} data-aos-delay={props.dataaosdelay} data-aos-once={props.dataaosonce} className="flex justify-around items-center tablet:my-5 tablet:px-10 px-36 gap-20">
+        <div data-aos={props.dataaos} data-aos-delay={props.dataaosdelay} data-aos-once={props.dataaosonce} className="flex justify-around items-center tablet:my-5 tablet:px-10 laptop:px-36 gap-20">
             {props.children}
         </div>
     )
@@ -32,8 +32,8 @@ const Circle = (props) => {
 const Description = (props) => {
     return (
         <div className="flex flex-col tablet:gap-5 gap-10 ">
-            <p className='font-kelvinch text-white tablet:text-3xl text-4xl'>{props.title}</p>
-            <p className="text-white font-kelvinch tablet:text-sm text-xl">{props.description}</p>
+            <p className='font-kelvinch text-white tablet:text-3xl laptop:text-4xl'>{props.title}</p>
+            <p className="text-white font-kelvinch tablet:text-sm laptop:text-xl">{props.description}</p>
         </div>
     )
 }

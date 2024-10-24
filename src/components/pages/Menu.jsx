@@ -51,7 +51,7 @@ const MenuPage = () => {
         <>
             <Header />
             <ScrollToTopBtn onClick={ScrollToTop} visible={isVisible ? 'translate-y-0 opacity-50' : 'translate-y-20 opacity-0'} />
-            <div className="w-full h-full pb-32 overflow-x-hidden bg-fixed bg-cover bg-center flex flex-col justify-center font-inter items-center bg-no-repeat bg-menubg backdrop-blur-2xl">
+            <div className="w-full h-full laptop:pb-32 overflow-x-hidden bg-fixed bg-cover bg-center flex flex-col justify-center font-inter items-center bg-no-repeat bg-menubg backdrop-blur-2xl">
                 <p data-aos="fade-in" data-aos-once="true" data-aos-delay="500" className="text-white font-kelvinch tablet:mb-24 text-3xl mt-48 mb-36">We Serve..</p>
                 <CircleMoveLeft
                     dataaos="fade-right"
@@ -60,10 +60,10 @@ const MenuPage = () => {
                     rotateValue={rotateValue}
                     imagecircle={circle}
                     image={friedrice}
-                    widthcircle="w-[25rem]"
-                    heightcircle="h-[25rem]"
-                    widthimage="w-[16.5rem]"
-                    heightimage="h-[16.5rem]"
+                    widthcircle="laptop:w-[25rem]"
+                    heightcircle="laptop:h-[25rem]"
+                    widthimage="laptop:w-[16.5rem]"
+                    heightimage="laptop:h-[16.5rem]"
                     title="Fried Rice"
                     description="A dish of seasoned rice, usually served with meat, or vegetables, and sometimes other condiments, such as soy sauce, vinegar, and garlic."
                 />
@@ -73,10 +73,10 @@ const MenuPage = () => {
                     rotateValue={-rotateValue}
                     imagecircle={circle}
                     image={chickenfriedrice}
-                    widthcircle="w-[25rem]"
-                    heightcircle="h-[25rem]"
-                    widthimage="w-[16.5rem]"
-                    heightimage="h-[16.5rem]"
+                    widthcircle="laptop:w-[25rem]"
+                    heightcircle="laptop:h-[25rem]"
+                    widthimage="laptop:w-[16.5rem]"
+                    heightimage="laptop:h-[16.5rem]"
                     title="Chicken Fried Rice"
                     description="Chicken fried rice combines tender chicken, cold day-old rice, scrambled eggs, garlic, soy sauce, sesame oil, and vibrant veggies like carrots and peas, stir-fried to perfection and garnished with green onions for a savory, flavorful meal that’s both comforting and delicious."
                 />
@@ -86,10 +86,10 @@ const MenuPage = () => {
                     rotateValue={rotateValue}
                     imagecircle={circle}
                     image={bbqporkrice}
-                    widthcircle="w-[25rem]"
-                    heightcircle="h-[25rem]"
-                    widthimage="w-[16.5rem]"
-                    heightimage="h-[16.5rem]"
+                    widthcircle="laptop:w-[25rem]"
+                    heightcircle="laptop:h-[25rem]"
+                    widthimage="laptop:w-[16.5rem]"
+                    heightimage="laptop:h-[16.5rem]"
                     title="BBQ Pork Rice"
                     description="BBQ pork rice combines smoky, sweet BBQ pork, cold rice, scrambled eggs, garlic, soy sauce, and veggies like peas and carrots, stir-fried to perfection for a flavorful, hearty meal."
                 />
@@ -99,10 +99,10 @@ const MenuPage = () => {
                     rotateValue={-rotateValue}
                     imagecircle={circle}
                     image={indomie}
-                    widthcircle="w-[25rem]"
-                    heightcircle="h-[25rem]"
-                    widthimage="w-[16.5rem]"
-                    heightimage="h-[16.5rem]"
+                    widthcircle="laptop:w-[25rem]"
+                    heightcircle="laptop:h-[25rem]"
+                    widthimage="laptop:w-[16.5rem]"
+                    heightimage="laptop:h-[16.5rem]"
                     title="Indomie"
                     description="Indomie is a popular instant noodle brand loved for its quick preparation and bold flavors. The chewy noodles are seasoned with soy sauce, garlic, and spices, creating a rich taste."
                 />
@@ -112,10 +112,10 @@ const MenuPage = () => {
                     rotateValue={rotateValue}
                     imagecircle={circle}
                     image={saltedeggchickenrice}
-                    widthcircle="w-[25rem]"
-                    heightcircle="h-[25rem]"
-                    widthimage="w-[16.5rem]"
-                    heightimage="h-[16.5rem]"
+                    widthcircle="laptop:w-[25rem]"
+                    heightcircle="laptop:h-[25rem]"
+                    widthimage="laptop:w-[16.5rem]"
+                    heightimage="laptop:h-[16.5rem]"
                     title="Salted Egg Chicken Rice"
                     description="Salted egg chicken rice features tender, crispy chicken smothered in a creamy salted egg sauce, served over fragrant jasmine rice. With its rich flavors and satisfying texture, this dish offers a delicious twist that keeps people coming back for more."
                 />

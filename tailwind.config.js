@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'phone': '360px',
+        'tablet': '680px',
+        'laptop': '1024px',
+      },
       colors: {
         'light-yellow': '#fef9c3'
       },

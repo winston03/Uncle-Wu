@@ -6,11 +6,13 @@ import chickenfriedrice from '../../assets/image/chickenfriedrice.jpg'
 import bbqporkrice from '../../assets/image/bbqporkrice.jpg'
 import indomie from '../../assets/image/indomie.jpg'
 import saltedeggchickenrice from '../../assets/image/saltedeggchickenrice.jpg'
-import arrow from '../../assets/image/arrow.png'
 import '../styles/CustomScrollBar.css'
 import '../styles/Font.css'
 import CircleMoveLeft from "../utilities/CircleMoveLeft";
 import CircleMoveRight from "../utilities/CircleMoveRight";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import ScrollToTopBtn from "../utilities/ScrollToTopBtn";
 
 
 const MenuPage = () => {
@@ -21,7 +23,6 @@ const MenuPage = () => {
     const ScrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-
 
     // Function to handle scroll event
     const handleScroll = () => {
@@ -37,6 +38,7 @@ const MenuPage = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
+        AOS.init({ duration: 2000 });
 
         // Cleanup event listener on component unmount
         return () => {
@@ -46,14 +48,15 @@ const MenuPage = () => {
 
 
     return (
-        <div className="">
+        <>
             <Header />
-            <button onClick={() => ScrollToTop()}
-                className={`fixed -rotate-90 z-10 bottom-10 right-10 cursor-pointer ${isVisible ? 'translate-y-0' : 'translate-y-20 opacity-0'} transition-all duration-1000 ease-in-out
-            }`}><img width={70} height={70} src={arrow} alt="" /></button>
-            <div className="w-full h-full pb-32 bg-fixed bg-cover bg-center flex flex-col justify-center font-inter items-center bg-no-repeat bg-menubg backdrop-blur-2xl">
-                <p className="text-white font-kelvinch text-3xl mt-48 mb-36">We Serve..</p>
+            <ScrollToTopBtn onClick={ScrollToTop} visible={isVisible ? 'translate-y-0 opacity-50' : 'translate-y-20 opacity-0'} />
+            <div className="w-full h-full pb-32 overflow-x-hidden bg-fixed bg-cover bg-center flex flex-col justify-center font-inter items-center bg-no-repeat bg-menubg backdrop-blur-2xl">
+                <p data-aos="fade-in" data-aos-once="true" data-aos-delay="500" className="text-white font-kelvinch tablet:mb-24 text-3xl mt-48 mb-36">We Serve..</p>
                 <CircleMoveLeft
+                    dataaos="fade-right"
+                    dataaosdelay="1500"
+                    dataaosonce="true"
                     rotateValue={rotateValue}
                     imagecircle={circle}
                     image={friedrice}
@@ -65,6 +68,8 @@ const MenuPage = () => {
                     description="A dish of seasoned rice, usually served with meat, or vegetables, and sometimes other condiments, such as soy sauce, vinegar, and garlic."
                 />
                 <CircleMoveRight
+                    dataaos="fade-left"
+                    dataaosonce="true"
                     rotateValue={-rotateValue}
                     imagecircle={circle}
                     image={chickenfriedrice}
@@ -76,6 +81,8 @@ const MenuPage = () => {
                     description="Chicken fried rice combines tender chicken, cold day-old rice, scrambled eggs, garlic, soy sauce, sesame oil, and vibrant veggies like carrots and peas, stir-fried to perfection and garnished with green onions for a savory, flavorful meal that’s both comforting and delicious."
                 />
                 <CircleMoveLeft
+                    dataaos="fade-right"
+                    dataaosonce="true"
                     rotateValue={rotateValue}
                     imagecircle={circle}
                     image={bbqporkrice}
@@ -87,6 +94,8 @@ const MenuPage = () => {
                     description="BBQ pork rice combines smoky, sweet BBQ pork, cold rice, scrambled eggs, garlic, soy sauce, and veggies like peas and carrots, stir-fried to perfection for a flavorful, hearty meal."
                 />
                 <CircleMoveRight
+                    dataaos="fade-left"
+                    dataaosonce="true"
                     rotateValue={-rotateValue}
                     imagecircle={circle}
                     image={indomie}
@@ -98,6 +107,8 @@ const MenuPage = () => {
                     description="Indomie is a popular instant noodle brand loved for its quick preparation and bold flavors. The chewy noodles are seasoned with soy sauce, garlic, and spices, creating a rich taste."
                 />
                 <CircleMoveLeft
+                    dataaos="fade-right"
+                    dataaosonce="true"
                     rotateValue={rotateValue}
                     imagecircle={circle}
                     image={saltedeggchickenrice}
@@ -108,9 +119,8 @@ const MenuPage = () => {
                     title="Salted Egg Chicken Rice"
                     description="Salted egg chicken rice features tender, crispy chicken smothered in a creamy salted egg sauce, served over fragrant jasmine rice. With its rich flavors and satisfying texture, this dish offers a delicious twist that keeps people coming back for more."
                 />
-                {/* <br /><br /><br /><br /> */}
             </div>
-        </div>
+        </>
     )
 }
 export default MenuPage

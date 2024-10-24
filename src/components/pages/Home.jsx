@@ -15,7 +15,7 @@ const HomePage = () => {
 
     return (
         <>
-            <Header animation="fade-down" delay="1500" />
+            <Header animation="fade-down" once="true" delay="1500" />
             <div className="w-full h-screen bg-cover bg-center flex flex-col justify-center font-inter items-center bg-no-repeat bg-homebg">
                 <div className="flex flex-col gap-3 justify-center items-center phone:px-10">
                     <p data-aos="fade-in" data-aos-once="true" className="tablet:text-5xl phone:text-center phone:text-[2.2rem] text-white font-bold text-5xl phone:pb-5">From Our Kitchen to Your Table.</p>

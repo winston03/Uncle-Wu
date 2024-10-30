@@ -1,7 +1,9 @@
+import Header from "../utilities/Header";
+
 const Home = () => {
     return (
-        <div>
-            <h1 className="sm:text-red-500">Home</h1>
+        <div className="bg-[url('/src/assets/image/homebg.png')] bg-no-repeat sm:bg-cover bg-center h-screen">
+            <Header />
         </div>
     );
 }

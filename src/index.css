@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-link {
+  @apply cursor-pointer hover:text-ly sm:text-2xl text-white transition-all duration-200 ease-in-out font-poppins;
+}
+
+.nav-link.active {
+  @apply text-ly;
+}

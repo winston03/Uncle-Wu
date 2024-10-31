@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'ly': "#fef9c3",
+      },
       screens: {
         sm: '360px',
         md: '680px',

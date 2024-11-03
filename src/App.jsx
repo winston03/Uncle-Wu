@@ -6,7 +6,7 @@ import Contact from "./components/pages/Contact.jsx";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/Uncle-Wu">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/our-story" element={<OurStory />} />

@@ -1,12 +1,20 @@
 import Header from "../utilities/Header";
+import '../styles/Font.css';
+import Slogan from "../utilities/Slogan";
+import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import menucircle from "../../assets/image/whitecircle.png";
 
 const Home = () => {
+
     return (
-        <div className="font-inter bg-[url('/src/assets/image/homebg.png')] bg-no-repeat w-full flex justify-center items-center bg-cover bg-center h-screen">
+        <div className="bg-[url('/src/assets/image/homebg.png')] overflow-hidden bg-no-repeat w-full flex-col flex justify-center items-center bg-cover bg-center h-screen">
             <Header />
-            <div className="flex flex-col gap-10 justify-center items-center">
-                <p className="sm:text-2xl font-semibold text-center lg:text-5xl md:text-3xl text-white">Where Every Bite Feels Like Home.</p>
-                <p className="uppercase text-[10px] tracking-[.5em] text-white/50">uncle wu <span className="text-ly">delights!</span></p>
+            <Slogan />
+            <div className={`absolute bottom-14 animate-spin hover:[animation-play-state:paused] hover:opacity-70 transition-all ease-in-out duration-200`}>
+                <NavLink to={"/menu"}>
+                    <img src={menucircle} className="sm:w-40 lg:w-52" alt="" />
+                </NavLink>
             </div>
         </div>
     );

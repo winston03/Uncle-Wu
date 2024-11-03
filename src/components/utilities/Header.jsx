@@ -15,7 +15,7 @@ const Header = () => {
     return (
         <div className=''>
             {/* Mobile View */}
-            <div className="h-20 fixed top-0 left-0 w-full flex items-center justify-center">
+            <div className="h-20 z-10 md:hidden fixed top-0 left-0 w-full flex items-center justify-center">
                 <img src={logo} width={100} alt="" />
                 <Hamburger
                     onClick={handleToggle}

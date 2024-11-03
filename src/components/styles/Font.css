@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "Kelvinch";
+  src: url("../../assets/fonts/kelvinch/Kelvinch-Bold.otf") format("opentype"),
+    url("../../assets/fonts/kelvinch/Kelvinch-Roman.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}

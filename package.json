@@ -1,6 +1,7 @@
 {
   "name": "uncle-wu",
   "private": true,
+  "homepage": "https://winston03.github.io/Uncle-Wu",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

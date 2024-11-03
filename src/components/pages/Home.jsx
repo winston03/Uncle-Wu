@@ -2,7 +2,6 @@ import Header from "../utilities/Header";
 import '../styles/Font.css';
 import Slogan from "../utilities/Slogan";
 import { NavLink } from "react-router-dom";
-import { useState, useEffect } from "react";
 import menucircle from "../../assets/image/whitecircle.png";
 
 const Home = () => {
